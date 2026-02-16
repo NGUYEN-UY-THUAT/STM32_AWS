@@ -1,0 +1,7 @@
+../Core/Src/dht11.c:16:13:dwt_init	1
+../Core/Src/dht11.c:23:13:delay_us	2
+../Core/Src/dht11.c:32:13:set_output	1
+../Core/Src/dht11.c:42:13:set_input	1
+../Core/Src/dht11.c:51:23:wait_for_state	3
+../Core/Src/dht11.c:66:6:dht11_init	1
+../Core/Src/dht11.c:73:16:dht11_read	12

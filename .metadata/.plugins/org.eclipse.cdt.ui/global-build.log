@@ -1,0 +1,196 @@
+16:26:59 **** Incremental Build of configuration Debug for project STM32_MQTT ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx '-DMBEDTLS_CONFIG_FILE="mbedtls_config.h"' -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/KS/STM32_MQTT/STM32_MQTT/Core/Src" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/BSP" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/BSP/utils" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/config" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/mqtt_helper" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/FreeRTOS-Kernel/include" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/FreeRTOS-Kernel/portable/GCC/ARM_CM4F" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/coreJSON/source/include" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/aws/aws-iot-core-mqtt-file-streams/source/include" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/3rdparty/tinycbor/src" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/aws/Jobs-for-AWS-IoT-embedded-sdk/source/include" -I"D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/aws/Jobs-for-AWS-IoT-embedded-sdk/source/otaJobParser/include" -I../Middlewares/Third_Party/Infineon_Wireless_Connectivity/aws-iot-device-sdk-embedded-C/platform/include/ -I../Middlewares/Third_Party/Infineon_Wireless_Connectivity/aws-iot-device-sdk-embedded-C/libraries/standard/coreMQTT/ -I../Middlewares/Third_Party/Infineon_Wireless_Connectivity/aws-iot-device-sdk-embedded-C/libraries/standard/coreMQTT/source/include/ -I../Middlewares/Third_Party/Infineon_Wireless_Connectivity/aws-iot-device-sdk-embedded-C/libraries/standard/coreMQTT/source/interface/ -I../Middlewares/Third_Party/Infineon_Wireless_Connectivity/aws-iot-device-sdk-embedded-C/libraries/standard/backoffAlgorithm/source/include/ -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/BSP/utils/sensor_util.h:36,
+                 from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'main':
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:33: warning: statement with no effect [-Wunused-value]
+   80 |     #define SdkLog( string )    printf string
+      |                                 ^~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:111:104: note: in expansion of macro 'SdkLog'
+  111 |         #define LogInfo( message )     SdkLog( ( "[INFO] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      |                                                                                                        ^~~~~~
+../Core/Src/main.c:108:1: note: in expansion of macro 'LogInfo'
+  108 | LogInfo("Initializing ESP32 AT module...");
+      | ^~~~~~~
+../Core/Src/main.c:108:9: error: expected ';' before string constant
+  108 | LogInfo("Initializing ESP32 AT module...");
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:40: note: in definition of macro 'SdkLog'
+   80 |     #define SdkLog( string )    printf string
+      |                                        ^~~~~~
+../Core/Src/main.c:108:1: note: in expansion of macro 'LogInfo'
+  108 | LogInfo("Initializing ESP32 AT module...");
+      | ^~~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:33: warning: statement with no effect [-Wunused-value]
+   80 |     #define SdkLog( string )    printf string
+      |                                 ^~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:109:105: note: in expansion of macro 'SdkLog'
+  109 |         #define LogError( message )    SdkLog( ( "[ERROR] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      |                                                                                                         ^~~~~~
+../Core/Src/main.c:110:5: note: in expansion of macro 'LogError'
+  110 |     LogError("Failed to initialize ESP32 AT module.");
+      |     ^~~~~~~~
+../Core/Src/main.c:110:14: error: expected ';' before string constant
+  110 |     LogError("Failed to initialize ESP32 AT module.");
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:40: note: in definition of macro 'SdkLog'
+   80 |     #define SdkLog( string )    printf string
+      |                                        ^~~~~~
+../Core/Src/main.c:110:5: note: in expansion of macro 'LogError'
+  110 |     LogError("Failed to initialize ESP32 AT module.");
+      |     ^~~~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:33: warning: statement with no effect [-Wunused-value]
+   80 |     #define SdkLog( string )    printf string
+      |                                 ^~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:111:104: note: in expansion of macro 'SdkLog'
+  111 |         #define LogInfo( message )     SdkLog( ( "[INFO] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      |                                                                                                        ^~~~~~
+../Core/Src/main.c:113:1: note: in expansion of macro 'LogInfo'
+  113 | LogInfo("ESP32 AT module initialized successfully.");
+      | ^~~~~~~
+../Core/Src/main.c:113:9: error: expected ';' before string constant
+  113 | LogInfo("ESP32 AT module initialized successfully.");
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:40: note: in definition of macro 'SdkLog'
+   80 |     #define SdkLog( string )    printf string
+      |                                        ^~~~~~
+../Core/Src/main.c:113:1: note: in expansion of macro 'LogInfo'
+  113 | LogInfo("ESP32 AT module initialized successfully.");
+      | ^~~~~~~
+../Core/Src/main.c:116:51: error: macro "LogInfo" passed 2 arguments, but takes just 1
+  116 | LogInfo("Joining Access Point: '%s'...", WIFI_SSID);
+      |                                                   ^
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:111: note: macro "LogInfo" defined here
+  111 |         #define LogInfo( message )     SdkLog( ( "[INFO] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      | 
+../Core/Src/main.c:116:1: error: 'LogInfo' undeclared (first use in this function)
+  116 | LogInfo("Joining Access Point: '%s'...", WIFI_SSID);
+      | ^~~~~~~
+../Core/Src/main.c:116:1: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:119:34: error: 'WIFI_SSID' undeclared (first use in this function)
+  119 |  while (esp32_join_ap((uint8_t *)WIFI_SSID,
+      |                                  ^~~~~~~~~
+../Core/Src/main.c:120:41: error: 'WIFI_PASSWORD' undeclared (first use in this function)
+  120 |                              (uint8_t *)WIFI_PASSWORD) != ESP32_OK) {
+      |                                         ^~~~~~~~~~~~~
+../Core/Src/main.c:121:59: error: macro "LogInfo" passed 2 arguments, but takes just 1
+  121 |     LogInfo("Retrying to join Access Point: %s", WIFI_SSID);
+      |                                                           ^
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:111: note: macro "LogInfo" defined here
+  111 |         #define LogInfo( message )     SdkLog( ( "[INFO] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      | 
+../Core/Src/main.c:123:58: error: macro "LogInfo" passed 2 arguments, but takes just 1
+  123 | LogInfo("Successfully joined Access Point: %s", WIFI_SSID);
+      |                                                          ^
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:111: note: macro "LogInfo" defined here
+  111 |         #define LogInfo( message )     SdkLog( ( "[INFO] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      | 
+../Core/Src/main.c:127:6: warning: implicit declaration of function 'esp32_sntp_configure'; did you mean 'esp32_mqtt_configure'? [-Wimplicit-function-declaration]
+  127 |  if (esp32_sntp_configure(UTC_OFFSET) != ESP32_OK) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+      |      esp32_mqtt_configure
+../Core/Src/main.c:127:27: error: 'UTC_OFFSET' undeclared (first use in this function); did you mean 'RCC_OFFSET'?
+  127 |  if (esp32_sntp_configure(UTC_OFFSET) != ESP32_OK) {
+      |                           ^~~~~~~~~~
+      |                           RCC_OFFSET
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:33: warning: statement with no effect [-Wunused-value]
+   80 |     #define SdkLog( string )    printf string
+      |                                 ^~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:109:105: note: in expansion of macro 'SdkLog'
+  109 |         #define LogError( message )    SdkLog( ( "[ERROR] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      |                                                                                                         ^~~~~~
+../Core/Src/main.c:128:6: note: in expansion of macro 'LogError'
+  128 |      LogError("Failed to configure SNTP.");
+      |      ^~~~~~~~
+../Core/Src/main.c:128:15: error: expected ';' before string constant
+  128 |      LogError("Failed to configure SNTP.");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:40: note: in definition of macro 'SdkLog'
+   80 |     #define SdkLog( string )    printf string
+      |                                        ^~~~~~
+../Core/Src/main.c:128:6: note: in expansion of macro 'LogError'
+  128 |      LogError("Failed to configure SNTP.");
+      |      ^~~~~~~~
+../Core/Src/main.c:134:9: warning: implicit declaration of function 'esp32_sntp_get_time'; did you mean 'esp32_get_sntp_time'? [-Wimplicit-function-declaration]
+  134 |     if (esp32_sntp_get_time(&sntp_time) != ESP32_OK) {
+      |         ^~~~~~~~~~~~~~~~~~~
+      |         esp32_get_sntp_time
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:33: warning: statement with no effect [-Wunused-value]
+   80 |     #define SdkLog( string )    printf string
+      |                                 ^~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:109:105: note: in expansion of macro 'SdkLog'
+  109 |         #define LogError( message )    SdkLog( ( "[ERROR] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      |                                                                                                         ^~~~~~
+../Core/Src/main.c:135:9: note: in expansion of macro 'LogError'
+  135 |         LogError("Failed to retrieve current time from SNTP.");
+      |         ^~~~~~~~
+../Core/Src/main.c:135:18: error: expected ';' before string constant
+  135 |         LogError("Failed to retrieve current time from SNTP.");
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:40: note: in definition of macro 'SdkLog'
+   80 |     #define SdkLog( string )    printf string
+      |                                        ^~~~~~
+../Core/Src/main.c:135:9: note: in expansion of macro 'LogError'
+  135 |         LogError("Failed to retrieve current time from SNTP.");
+      |         ^~~~~~~~
+../Core/Src/main.c:145:26: error: macro "LogInfo" passed 8 arguments, but takes just 1
+  145 |             sntp_time.sec);
+      |                          ^
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:111: note: macro "LogInfo" defined here
+  111 |         #define LogInfo( message )     SdkLog( ( "[INFO] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      | 
+../Core/Src/main.c:148:74: error: macro "LogInfo" passed 3 arguments, but takes just 1
+  148 |   LogInfo("Connecting to MQTT broker at %s:%d...", MQTT_BROKER, MQTT_PORT);
+      |                                                                          ^
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:111: note: macro "LogInfo" defined here
+  111 |         #define LogInfo( message )     SdkLog( ( "[INFO] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      | 
+../Core/Src/main.c:149:20: error: 'CLIENT_ID' undeclared (first use in this function)
+  149 |   if (mqtt_connect(CLIENT_ID, MQTT_BROKER, MQTT_PORT) != MQTT_SUCCESS) {
+      |                    ^~~~~~~~~
+../Core/Src/main.c:149:31: error: 'MQTT_BROKER' undeclared (first use in this function)
+  149 |   if (mqtt_connect(CLIENT_ID, MQTT_BROKER, MQTT_PORT) != MQTT_SUCCESS) {
+      |                               ^~~~~~~~~~~
+../Core/Src/main.c:149:44: error: 'MQTT_PORT' undeclared (first use in this function); did you mean 'MQTT_QOS2'?
+  149 |   if (mqtt_connect(CLIENT_ID, MQTT_BROKER, MQTT_PORT) != MQTT_SUCCESS) {
+      |                                            ^~~~~~~~~
+      |                                            MQTT_QOS2
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:33: warning: statement with no effect [-Wunused-value]
+   80 |     #define SdkLog( string )    printf string
+      |                                 ^~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:109:105: note: in expansion of macro 'SdkLog'
+  109 |         #define LogError( message )    SdkLog( ( "[ERROR] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      |                                                                                                         ^~~~~~
+../Core/Src/main.c:150:7: note: in expansion of macro 'LogError'
+  150 |       LogError("Failed to connect to MQTT broker.");
+      |       ^~~~~~~~
+../Core/Src/main.c:150:16: error: expected ';' before string constant
+  150 |       LogError("Failed to connect to MQTT broker.");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:40: note: in definition of macro 'SdkLog'
+   80 |     #define SdkLog( string )    printf string
+      |                                        ^~~~~~
+../Core/Src/main.c:150:7: note: in expansion of macro 'LogError'
+  150 |       LogError("Failed to connect to MQTT broker.");
+      |       ^~~~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:33: warning: statement with no effect [-Wunused-value]
+   80 |     #define SdkLog( string )    printf string
+      |                                 ^~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:111:104: note: in expansion of macro 'SdkLog'
+  111 |         #define LogInfo( message )     SdkLog( ( "[INFO] " LOG_METADATA_FORMAT, LOG_METADATA_ARGS ) ); SdkLog( message ); SdkLog( ( "\r\n" ) )
+      |                                                                                                        ^~~~~~
+../Core/Src/main.c:153:3: note: in expansion of macro 'LogInfo'
+  153 |   LogInfo("Successfully connected to MQTT broker.");
+      |   ^~~~~~~
+../Core/Src/main.c:153:11: error: expected ';' before string constant
+  153 |   LogInfo("Successfully connected to MQTT broker.");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/KS/STM32_MQTT/STM32_MQTT/IOT_SDK/Thirdparty/aws-iot-device-sdk-libraries/standard/logging-stack/logging_stack.h:80:40: note: in definition of macro 'SdkLog'
+   80 |     #define SdkLog( string )    printf string
+      |                                        ^~~~~~
+../Core/Src/main.c:153:3: note: in expansion of macro 'LogInfo'
+  153 |   LogInfo("Successfully connected to MQTT broker.");
+      |   ^~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.

@@ -1,0 +1,14 @@
+20:08:51 **** Incremental Build of configuration Debug for project 001_MQTT_Subscribe_Publish ****
+make -j12 all 
+arm-none-eabi-size  001_MQTT_Subscribe_Publish.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55512	    472	  71800	 127784	  1f328	001_MQTT_Subscribe_Publish.elf
+Finished building: default.size.stdout
+ 
+20:08:57 **** Incremental Build of configuration Debug for project 001_MQTT_Subscribe_Publish ****
+make -j12 all 
+arm-none-eabi-size  001_MQTT_Subscribe_Publish.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55512	    472	  71800	 127784	  1f328	001_MQTT_Subscribe_Publish.elf
+Finished building: default.size.stdout
+ 

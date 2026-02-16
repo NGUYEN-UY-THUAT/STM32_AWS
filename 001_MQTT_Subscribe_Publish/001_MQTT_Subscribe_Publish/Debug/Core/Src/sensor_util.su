@@ -1,0 +1,4 @@
+../Core/Src/sensor_util.c:20:13:update_sensor_if_needed	16	static
+../Core/Src/sensor_util.c:42:5:init_temperature_humidity_sensor	8	static
+../Core/Src/sensor_util.c:56:6:get_temperature_reading	16	static
+../Core/Src/sensor_util.c:68:6:get_humidity_reading	16	static

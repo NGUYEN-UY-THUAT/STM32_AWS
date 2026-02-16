@@ -1,0 +1,7 @@
+../Core/Src/dht11.c:16:13:dwt_init	4	static
+../Core/Src/dht11.c:23:13:delay_us	24	static
+../Core/Src/dht11.c:32:13:set_output	32	static
+../Core/Src/dht11.c:42:13:set_input	32	static
+../Core/Src/dht11.c:51:23:wait_for_state	24	static
+../Core/Src/dht11.c:66:6:dht11_init	8	static
+../Core/Src/dht11.c:73:16:dht11_read	40	static
